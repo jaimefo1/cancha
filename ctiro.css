@@ -1,0 +1,58 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+  font: bold;
+}
+
+.tiradores {
+  table-layout: auto;
+  border-collapse: collapse;
+  border: 2px solid green;
+  padding: 20px;
+}
+
+.cancha {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 5px solid red;
+    margin: auto;
+  }
+
+.score {
+    table-layout: auto;
+    border-collapse: collapse;
+    border: 3px solid blue;
+    margin: auto;
+    font-size: 20px;
+  }
+
+ tr, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .cancha tr td{
+    text-align: center;
+  }
+  /* ajustamos la columna de nombre del tirador a 100 px */
+  .score .tirador {
+    width: auto;
+    padding: 5px;
+  }
+  /* ajustamos el tamaño del plato a 100 x 100 px" */
+  .plato{
+    max-width:80%;
+    height: auto;
+    background-color: white;
+  }
+
+/*ajustamos la img del elemento class='plato' al tamaño del padre!! */
+  .plato img {
+    width: inherit;
+    height: inherit;
+  }
+
+  /*no se ajusta al tamaño de la <td> que contiene el boton! */
+  .botonMultiple img {
+    max-width: 100px;
+    height: auto;
+  }

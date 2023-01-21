@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Escuadra.js"></script>
+    <script src="controlEscuadra.js"></script>
+    <link href="ctiro.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- onload="crearElementos(unaEscuadra)"-->
+    <script>
+        //creamos la variable que va manejar la serie (unaEscuadra)
+        var escuadra = new Object();
+    </script>
+    <!--DIV para meter los tiradores e iniciar la serie-->
+    <div id='datosSerie' class='platosComienzo'>
+        <table id='nombreTiradores' class='tiradores'>
+            <tr>
+                <td class="nombreTirador"><input type="text" id='nombre1' maxlength="15" value="PEPINO"></td>
+                <td class="nombreTirador"><input type="text" id='nombre2' maxlength="15" value="JAVIER"></td>
+                <td class="nombreTirador"><input type="text" id='nombre3' maxlength="15" value="GUZMAN"></td>
+                <td class="nombreTirador"><input type="text" id='nombre4' maxlength="15" value="TRINI"></td>
+                <td class="nombreTirador"><input type="text" id='nombre5' maxlength="15" value="JAIME"></td>
+            </tr>
+            <br>
+            <tr>
+                <td class="nombreTirador"><input type="text" id='nombre6' maxlength="15" value="CHAPARRO"></td>
+                <td colspan="4"></td>
+            </tr>
+        </table>
+        <input type="number" id='numeroPlatosSerie' size="2" max=25 min=1 value=2>
+        <label for="numeroPlatosSerie">PLATOS SERIE</label>
+        <br>
+        <button id='comenzar' value='comenzar' onclick="nuevaEscuadra()">COMENZAR</button>
+    </div>
+    <!-- este DIV servirá para controlar la escuadra que se haya empezado-->
+    <div id='controlEscuadra' hidden>
+        <table id="cancha" class='cancha'>
+            <tr id="platos"></tr>
+            <tr id="etiquetasPuestos"></tr>
+            <tr id="puestos"></tr>
+            <tr id="esperas"></tr>
+        </table>
+        <br>
+        <table id="score" class='score'>
+        </table>
+    </div>
+</body>
